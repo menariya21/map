@@ -12,15 +12,18 @@ const newproduct = products.map(product=>({
         diccountPrice:product.price*0.9
 }));
 
-const productList = document.querySelector("#products-list");
+const productList = document.querySelector(".product-Name tbody");
 
 
       newproduct.forEach(product=>{
-             const productCard = ` <div class="productP">
-              <h3>${product.name}</h3>
-              <p>Original Price: $${product.price}</p>
-              <p>Discounted Price: $${product.diccountPrice.toFixed(2)}</p>
-        </div>`;
+             const productCard = `<div class="productP">
+           <tr>
+    <td>${product.name}</td>  
+    <td> $${product.price}</td>
+    <td> $${product.diccountPrice.toFixed(2)}</td>
+</tr>
+
+</div>`;
 
 
         productList.innerHTML += productCard;
@@ -44,15 +47,16 @@ const employees=[
         
    }));
 
-   const employesList = document.querySelector(".employes-list")
+   const employesList = document.querySelector(".database tbody")
 
           
       employessSalary.forEach(sal2=>{
                  const totalSal  = ` <div class="bonusWithsalary">
-               <h3>${sal2.name}</h3>
-               <p>Salary:$${sal2.salary}</p>
-               <p>Salary With Bonus:$${sal2.salaryWithBonus.toFixed(2)}</p>
-
+                 <tr>
+               <td>${sal2.name}</td>
+               <td>$${sal2.salary}</td>
+               <td>$${sal2.salaryWithBonus.toFixed(2)}</td>
+           </tr>
          </div>`
          employesList.innerHTML += totalSal;
         })
@@ -74,13 +78,13 @@ const employees=[
 
     }))
 
-    let listOFCourse = document.querySelector(".ListOFCouse")
+    let listOFCourse = document.querySelector(".AllCourses tbody")
 
-    AllCourse.forEach(C2=>{
+    AllCourse.forEach(C2=>{ 
               const course =` <div class="course">
-            <h3>${C2.Title}</h3>
-            <p>Original price:$${C2.price}</p>
-            <p>Discount Price: $${C2.FinalPrice.toFixed(2)}</p>
+            <td>${C2.Title}</td>
+            <td>$${C2.price}</td>
+            <td>$${C2.FinalPrice.toFixed(2)}</td>
     </div>`;
 
     listOFCourse.innerHTML += course
@@ -92,9 +96,31 @@ const employees=[
 
     // Display Product Reviews
 
-      const product = [
-        {name:"HeadPhones",price:1500, rating:4.688},
-        {name:"Leptop",price:25000, rating:5.768},
-        {name:"Ipaid",price:35000, rating:4.800}
-      ]
-         
+    const Reviewer =[
+      {product:"Iphone",reviwer:"mahi",rating:5,text:"Amazing phone!"},
+      {product:"Samsung",reviwer:"rahi",rating:5,text:"Great display!"},
+      {product:"OnePlus",reviwer:"kavi",rating:5,text:"good performance,but average batter!"},
+
+
+    ]
+
+    const AllReviewer = Reviewer.map(R1=>({ ...R1,
+           Rating:"⭐".repeat(R1.rating)}))
+
+
+    const tableReview = document.querySelector(".Product-revieews tbody");
+
+
+         AllReviewer.forEach(R2=>{
+             const revieRow = `<div class="review">
+  <tr>
+   <td>${R2.product}</td>
+   <td>${R2.reviwer}</td>
+   <td>${R2.Rating}</td>
+   <td>${R2.text}</td>
+</tr>
+</div>`
+tableReview.innerHTML += revieRow
+      
+                  
+         })
