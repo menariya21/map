@@ -49,65 +49,43 @@ nav h2{
 }
 
 .thirdONe{
-    background-color: #b5838d;
+    background-color: #6e3579;
     padding: 10px;
     border-radius: 2px;
     width: 80%;
     margin: 30px 50px;
 
 }
-.productP{
-        border: 1px solid black;
-        border-radius: 8px;
-        border: none;
-        padding: 10px;
-        margin-bottom: 10px;
-        width: 60%;
-        background-color: rgb(244, 244, 156);
-        /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
-        outline: none;
-        
-}
-h1{
-    color: rgb(238, 249, 249);
-    border: 1px solid black;
-    width: 30%;
-  border: none;
-  border-radius: 5%;
-  padding: 2px;
-    background-color: rgb(27, 16, 2);
- margin-bottom: 10px;
-    
-  
-   
-}
-h3{
-    margin: 0;
-    border-bottom: 1px solid gray;
-    width: 10%;
-    color: rgb(22, 195, 195);
+.forthOne{
+    background-color: #60a7aa;
+    padding: 10px;
+    border-radius: 2px;
+    width: 80%;
+    margin: 30px 50px;
+   margin-bottom: 30px;
 
 }
- p{
-    margin: 5px 0;
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-transform: capitalize;
+    text-align: center;
+    background-color: burlywood;
+
 }
-.bonusWithsalary{
-    border: 1px solid blue;
-    margin-bottom: 10px;
-    border: none;
+th,td{
+    border: 1px solid black;
     padding: 10px;
-    border-radius: 8px;
-    width: 60%;
-    background-color: rgb(233, 233, 116);
-     outline: none;
 }
-.course{
-    border: 1px solid blue;
-    margin-bottom: 10px;
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
-    width: 60%;
-    background-color: rgb(233, 233, 116);
-     outline: none;
+th{
+    background-color: #b5838d;
+    
+    
+}
+
+tr:hover{
+    background-color: #561717;
+    color: rgb(223, 223, 17);
 }
